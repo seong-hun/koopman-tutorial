@@ -18,3 +18,14 @@ A tutorial for using Koopman operator for controller design.
 ```bash
 python main.py
 ```
+
+## Description
+
+* Nonline system:
+```math
+\frac{d}{dt} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} k_1 & 0 \\ 0 & k_2 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} + \begin{bmatrix} 0 \\ - k_2 x_1^2 \end{bmatrix} + \begin{bmatrix} 0 \\ 1 \end{bmatrix} u
+```
+
+* Control law: $u = - K_1 x_1 - K_2 x_2$
+
+* Koopman lifting: $z = [x_1, x_2, x_1^2]^T$
