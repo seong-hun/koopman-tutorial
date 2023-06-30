@@ -2,7 +2,7 @@
 
 A tutorial for using Koopman operator for controller design.
 
-![ezgif com-video-to-gif](https://github.com/seong-hun/koopman-tutorial/assets/9782545/640ea8af-3d86-4db0-a50d-8c07b5bdb558)
+![ezgif com-resize](https://github.com/seong-hun/koopman-tutorial/assets/9782545/f93ec9b5-1c9b-415c-a07a-4c8552314fe0)
 
 *Source: (Youtube) Steven Brunton's [Koopman Operator Optimal Control](https://www.youtube.com/watch?v=qOdwRel-1xA&t=69s)*
 
