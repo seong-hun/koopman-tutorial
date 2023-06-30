@@ -82,6 +82,10 @@ class ProjectionLine:
         data = np.vstack((start, end))
         self.line.set_data_3d(*data.T)
 
+    def remove(self):
+        for a in self.artists:
+            a.remove()
+
 
 class Surface:
     def __init__(self, X, Y, Z, **kwargs):
@@ -110,8 +114,12 @@ artists = (
     + proj_line.artists
 )
 
+temp_projs = []
+
 
 def init():
+    while len(temp_projs):
+        temp_projs.pop().remove()
     return artists
 
 
@@ -125,14 +133,16 @@ def update(i):
         end=data["koopman_linear_system"]["traj"][:, i],
     )
     if i % 20 == 0:
-        ProjectionLine(
-            linestyle=":",
-            start=np.hstack((data["nonlinear_system"]["traj"][:, i], 0)),
-            end=data["koopman_linear_system"]["traj"][:, i],
+        temp_projs.append(
+            ProjectionLine(
+                linestyle=":",
+                start=np.hstack((data["nonlinear_system"]["traj"][:, i], 0)),
+                end=data["koopman_linear_system"]["traj"][:, i],
+            )
         )
 
     return artists
 
 
-ani = animation.FuncAnimation(fig, func=update, init_func=init, frames=400, interval=20)
+ani = animation.FuncAnimation(fig, func=update, init_func=init, frames=300, interval=20)
 plt.show()
