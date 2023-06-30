@@ -4,8 +4,8 @@ A tutorial for using Koopman operator for controller design.
 
 ![ezgif com-resize](https://github.com/seong-hun/koopman-tutorial/assets/9782545/f93ec9b5-1c9b-415c-a07a-4c8552314fe0)
 
-* **Blue line**: Nonlinear system trajectory
-* **Red line**: Koopman linear system trajectory
+* **Red line**: Nonlinear system trajectory
+* **Blue line**: Koopman linear system trajectory
 * *using the same control inputs*
 
 *Source: (Youtube) Steven Brunton's [Koopman Operator Optimal Control](https://www.youtube.com/watch?v=qOdwRel-1xA&t=69s)*
